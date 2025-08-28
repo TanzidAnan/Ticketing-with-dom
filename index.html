@@ -17,16 +17,49 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <main class="container w-10/12 mx-auto">
-        <section>
-            <h2 class="text-4xl">Hello</h2>
-            <h4 class="text-lg">Hi</h4>
-            <div>
-                <button class="btn" onclick="hendleClick(event)">My btn</button>
+<body class="bg-white">
+
+    <header class=" bg-blue-100">
+        <div class="navbar  shadow-sm w-10/12 mx-auto">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        <li><a>Item 1</a></li>
+                        <li><a>Item 3</a></li>
+                    </ul>
+                </div>
+                <a class="btn btn-ghost text-xl w-32"><img src="img/logo.png" alt=""></a>
             </div>
-        </section>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a>Item 1</a></li>
+                    <li><a>Item 3</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end flex gap-20">
+                <h1 class="text-lg text-black  font-bold ">Setting</h1>
+                <a class="btn bg-white">
+                    <img class="w-10 " src="img/Screenshot_31-removebg-preview.png" alt="">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
     </main>
+
+    <footer>
+
+    </footer>
 
     <script src="js/text.js"></script>
 </body>
