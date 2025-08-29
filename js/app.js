@@ -25,10 +25,21 @@ for (const btn of allBtn) {
 
         const totleCost = document.getElementById('totle-cost').innerText;
         const newTotleCost = parseFloat(totleCost);
+        // ==============
         const sum =newTotleCost + parseFloat(placePrice)
         // document.getElementById('totle-cost').innerText = sum;
         setInnerText('totle-cost',sum)
-        console.log(placePrice)
+
+
+        // =========================
+
+        const grentTotle =document.getElementById('grand-totle').innerText;
+        const convertedGrentTotle =parseFloat(grentTotle);
+        const sum2 =convertedGrentTotle +parseFloat(placePrice);
+        // document.getElementById('grand-totle').innerText=sum2
+        setInnerText('grand-totle',sum2)
+
+
     })
 };
 

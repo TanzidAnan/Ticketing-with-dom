@@ -3,3 +3,4 @@ function setInnerText(id,value){
     return cardCount
 }
 
+
