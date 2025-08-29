@@ -23,12 +23,15 @@ for (const btn of allBtn) {
         li.appendChild(p2);
         selectedContainer.appendChild(li)
 
-        const totleCost = document.getElementById('totle-cost').innerText;
-        const newTotleCost = parseFloat(totleCost);
-        // ==============
-        const sum =newTotleCost + parseFloat(placePrice)
+        // const totleCost = document.getElementById('totle-cost').innerText;
+        // const newTotleCost = parseFloat(totleCost);
+        // // ==============
+        // const sum =newTotleCost + parseFloat(placePrice)
         // document.getElementById('totle-cost').innerText = sum;
-        setInnerText('totle-cost',sum)
+        // setInnerText('totle-cost',sum);
+        totleCost('totle-cost',parseFloat(placePrice))
+
+        // totleCost('totle-cost',parseFloat(totleCost))
 
 
         // =========================
