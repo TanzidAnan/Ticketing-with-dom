@@ -25,7 +25,9 @@ for (const btn of allBtn) {
 
         const totleCost = document.getElementById('totle-cost').innerText;
         const newTotleCost = parseFloat(totleCost);
-        document.getElementById('totle-cost').innerText = newTotleCost + parseFloat(placePrice)
+        const sum =newTotleCost + parseFloat(placePrice)
+        // document.getElementById('totle-cost').innerText = sum;
+        setInnerText('totle-cost',sum)
         console.log(placePrice)
     })
 };
