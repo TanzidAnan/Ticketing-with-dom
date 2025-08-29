@@ -22,6 +22,10 @@ for (const btn of allBtn) {
         li.appendChild(p)
         li.appendChild(p2);
         selectedContainer.appendChild(li)
+
+        const totleCost =document.getElementById('totle-cost').innerText;
+        const newTotleCost =parseFloat(totleCost);
+        console.log(newTotleCost)
     })
 };
 
