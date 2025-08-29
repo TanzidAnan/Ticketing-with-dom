@@ -1,0 +1,7 @@
+li{
+    display: flex;
+    color: black;
+    font-size: 17px;
+    gap: 15px;
+    font-weight: 500;
+}

@@ -1,16 +1,27 @@
-function hendleSelect() {
-    console.log(5455)
-}
+// function hendleSelect() {
+//     console.log(5455)
+// }
 
 const allBtn = document.getElementsByClassName('add-to-btn');
 
 let count = 0;
 
 for (const btn of allBtn) {
-    btn.addEventListener('click', function () {
-        console.log(454)
+    btn.addEventListener('click', function (e) {
         count = count + 1
-        document.getElementById('card-count').innerText =count;
-        console.log(count)
+        setInnerText('card-count', count)
+        // console.log(count)
+        const placeName = e.target.parentNode.parentNode.childNodes[1].childNodes[1].innerText;
+        const placePrice = e.target.parentNode.parentNode.childNodes[1].childNodes[3].childNodes[1].innerText;
+        const selectedContainer = document.getElementById('selected-place-container');
+        const li = document.createElement('li');
+        const p = document.createElement('p')
+        p.innerText = placeName
+        const p2 = document.createElement('p');
+        p2.innerText = placePrice;
+        li.appendChild(p)
+        li.appendChild(p2);
+        selectedContainer.appendChild(li)
     })
-}
+};
+
