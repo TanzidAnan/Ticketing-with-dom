@@ -29,20 +29,50 @@ for (const btn of allBtn) {
         // const sum =newTotleCost + parseFloat(placePrice)
         // document.getElementById('totle-cost').innerText = sum;
         // setInnerText('totle-cost',sum);
-        totleCost('totle-cost',parseFloat(placePrice))
+        totleCost('totle-cost', parseFloat(placePrice))
 
         // totleCost('totle-cost',parseFloat(totleCost))
 
 
         // =========================
 
-        const grentTotle =document.getElementById('grand-totle').innerText;
-        const convertedGrentTotle =parseFloat(grentTotle);
-        const sum2 =convertedGrentTotle +parseFloat(placePrice);
+        // const grentTotle =document.getElementById('grand-totle').innerText;
+        // const convertedGrentTotle =parseFloat(grentTotle);
+        // const sum2 =convertedGrentTotle +parseFloat(placePrice);
         // document.getElementById('grand-totle').innerText=sum2
-        setInnerText('grand-totle',sum2)
+        grandTotalCost('totle-cost', parseFloat(placePrice))
+        // grentTotle('grand-totle',parseFloat(placePrice))
 
 
     })
 };
+
+function totleCost(id, value) {
+    const totleCost = document.getElementById(id).innerText;
+    const newTotleCost = parseFloat(totleCost);
+    // ==============
+    const sum = newTotleCost + parseFloat(value);
+    setInnerText(id, sum)
+
+}
+
+function grandTotalCost(category) {
+    const totalCost = document.getElementById('totle-cost').innerText;
+    const convertedGrentTotle = parseInt(totalCost);
+
+    if (category == 'Bus') {
+        setInnerText('grand-totle',convertedGrentTotle +100)
+    }
+    else if(category == 'Train'){
+        setInnerText('grand-totle',convertedGrentTotle -200)
+    }
+    else if(category == 'flight'){
+        setInnerText('grand-totle',convertedGrentTotle +500)
+    }
+    else{
+        setInnerText('grand-totle',convertedGrentTotle)
+    }
+
+    
+}
 
