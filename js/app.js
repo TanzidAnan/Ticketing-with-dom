@@ -21,6 +21,13 @@ for (const btn of allBtn) {
         p2.innerText = placePrice;
         li.appendChild(p)
         li.appendChild(p2);
+
+
+        const budger = document.getElementById('totle-budget').innerText;
+        const convertedBudger = parseInt(budger);
+
+        document.getElementById('totle-budget').innerText = convertedBudger - parseInt(placePrice)
+
         selectedContainer.appendChild(li)
 
         // const totleCost = document.getElementById('totle-cost').innerText;
@@ -61,18 +68,18 @@ function grandTotalCost(category) {
     const convertedGrentTotle = parseInt(totalCost);
 
     if (category == 'Bus') {
-        setInnerText('grand-totle',convertedGrentTotle +100)
+        setInnerText('grand-totle', convertedGrentTotle + 100)
     }
-    else if(category == 'Train'){
-        setInnerText('grand-totle',convertedGrentTotle -200)
+    else if (category == 'Train') {
+        setInnerText('grand-totle', convertedGrentTotle - 200)
     }
-    else if(category == 'flight'){
-        setInnerText('grand-totle',convertedGrentTotle +500)
+    else if (category == 'flight') {
+        setInnerText('grand-totle', convertedGrentTotle + 500)
     }
-    else{
-        setInnerText('grand-totle',convertedGrentTotle)
+    else {
+        setInnerText('grand-totle', convertedGrentTotle)
     }
 
-    
+
 }
 
